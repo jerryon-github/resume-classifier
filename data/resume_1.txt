@@ -1,0 +1,3 @@
+John Doe
+Python Developer
+Experienced in machine learning, NLP, and REST APIs. Worked with Flask, Scikit-learn, and spaCy.

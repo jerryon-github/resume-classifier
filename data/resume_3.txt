@@ -1,0 +1,3 @@
+Alex Johnson
+Junior Data Analyst
+Some experience with Python, Pandas, and Scikit-learn. Interest in NLP projects.

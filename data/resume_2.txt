@@ -1,0 +1,3 @@
+Jane Smith
+Front-end Developer
+Skilled in React, Vue.js, and Figma. Limited exposure to backend or Python.

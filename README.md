@@ -1,92 +1,36 @@
-# 📊 Customer Churn Prediction Dashboard
+# 📄 Resume Classifier (NLP ATS Filter)
 
-A machine learning-powered dashboard for predicting customer churn using a Random Forest classifier. Built with Streamlit and designed for quick business insights.
+**Goal:** NLP tool to automatically rank resumes based on how well they match a given job description (JD). Built with Streamlit + Scikit-learn + spaCy.
 
----
+## 🧠 Key Features
+- Upload a Job Description and multiple resumes (text or PDF)
+- Preprocess text using TF-IDF and NER (spaCy)
+- Score and rank resumes based on relevance to the JD
 
-## 🔧 Tech Stack
-
-- **Python**  
-- **Pandas** for data handling  
-- **Scikit-learn** for machine learning  
-- **Joblib** for model persistence  
-- **Streamlit** for interactive UI
-
----
-
-## 📁 Project Structure
-
+## 📁 Folder Structure
 ```
-customer_churn_dashboard/
+resume-classifier/
 ├── data/
-│   └── churn_data.csv              # Clean dataset
-├── model/
-│   └── churn_model.pkl             # Trained model
-│   └── feature_list.pkl            # Feature schema
+│   └── sample_resumes/
 ├── notebooks/
-│   └── modeling.ipynb              # Model training notebook
+│   └── text_cleaning.ipynb
 ├── src/
-│   └── churn_dashboard.py          # Streamlit app
+│   └── app.py
 ├── requirements.txt
 ├── LICENSE
 ├── README.md
 ```
 
----
+## 🚀 Run the App
+```bash
+streamlit run src/app.py
+```
 
-## 🚀 How to Run Locally
+## 🔧 Tech Stack
+- Python, Streamlit
+- Scikit-learn, spaCy, PyPDF2
+- TF-IDF, Cosine Similarity
 
-1. **Clone this repository**  
-   ```bash
-   git clone https://github.com/yourusername/customer-churn-dashboard.git
-   cd customer-churn-dashboard
-   ```
-
-2. **Install dependencies**  
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Train the model (if not already saved)**  
-   Open `notebooks/modeling.ipynb` and run all cells.
-
-4. **Run the Streamlit dashboard**  
-   ```bash
-   streamlit run src/churn_dashboard.py
-   ```
-
----
-
-## 🧪 Sample Features Used
-
-- Gender (Male/Female)  
-- Age (numerical)  
-- Monthly Charges  
-- Tenure (in months)  
-- Contract Type (Month-to-month, One year, Two year)
-
----
-
-## 🌍 Deployment (Streamlit Cloud)
-
-To deploy live:
-1. Push this repo to your GitHub.
-2. Go to [https://streamlit.io/cloud](https://streamlit.io/cloud)
-3. Link your GitHub and select this repo.
-4. Set the main app file to: `src/churn_dashboard.py`
-
-✅ Your app will be live on the web!
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).  
-You are free to use, modify, and distribute it with proper attribution.
-
----
-
-## 👤 Author
-
-[Jerry]  
-[https://github.com/jerryon-github]
+## 🏗️ To-do
+- Add PDF parsing support
+- Integrate with real ATS
